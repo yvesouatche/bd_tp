@@ -1,0 +1,33 @@
+connection à mysql server(mysql -u root -p)
+
+creation de la base de donnée(cf la base exportée)
+
+creation des tables(cf la base exporté)
+
+insertion des données dans les differentes tables(cf la base exportée)
+
+manipulation///
+
+show databases;
+
+use formationSorportive;
+
+show tables;//pour voir toutes les tables dans la base de données selectionnées
+
+desc etudiants;//pour voir la structure de la table etudiants
+desc frais;
+desc pratiques;
+desc sports;
+
+select * from formationSportive. `etudiants`;
+select * from formationSportive. `sports`;
+select * from formationSportive. `frais`;
+select * from formationSportive. `pratiques`;
+
+
+select * from formationSportive. `sports` order by nom asc;
+select * from formationSportive. `sports` order by nom desc;
+
+SELECT  etudiants.*, frais.*  FROM etudiants RIGHT JOIN frais ON frais.id_E = etudiants.id_E ;
+
+SELECT  etudiants.nom, frais.montant FROM etudiants RIGHT JOIN frais ON frais.id_E = etudiants.id_E ;
